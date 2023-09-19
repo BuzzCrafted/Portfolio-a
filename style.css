@@ -4,6 +4,9 @@
     font-family: 'poppins' , sans-serif ;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #000000;
     color: white;
@@ -79,7 +82,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
 }
 .tab-tiles{
     display: flex;
@@ -184,7 +187,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.4),#eb6342);
+    background: linear-gradient(rgba(131, 153, 212, 0.4),#54e741);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -199,12 +202,12 @@ nav ul li a:hover::after{
     transition: height 0.5s;
 }
 .layer h3,p{
-    color: #000000;
+    color: #fff8f8;
     font-weight: 700;
     margin-bottom: 20px;
 }
 .layer p{
-    color: #000000;
+    color: #faf9f9;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -230,4 +233,178 @@ nav ul li a:hover::after{
     border-radius: 6px;
     text-decoration: none;
     color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #39FF14;
+}
+
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #39FF14;
+    margin-right: 15px;
+    font-size: 25px;
+    
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #39FF14;
+    display: inline-block;
+    transition: transform 0.5s;
+    
+}
+.social-icons a:hover{
+    color: #fcfcfc;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #39FF14;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    padding: 10px 0;
+    background: #0b0c0a;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff1414;
+}
+#msg{
+    color: #39FF14;
+    margin-top: -50px;
+    display: block;
+}
+
+
+
+/* Media Query */
+nav .fas{
+     display: none;
+}
+
+@media only screen and (max-width: 600px){
+    
+    #header{
+        background-image: url(assets/Rocket.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+   }
+   nav ul{
+    background: #39FF14;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+   }
+   #bgimage{display:none}
+   nav ul li{
+    display: block;
+    margin: 25px;
+   }
+   nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+   }
+   .sub-title{
+    font-size: 40px;
+   }
+   .about-col-1,.about-col-2{
+    flex-basis:100%;
+   }
+   .about-col-1{
+    margin-bottom: 300px;
+   }
+   .contact-left,.contact-right{
+    flex-direction: column;
+    flex-basis: 100%;  
+   }
+   
+
+
+
+
+
+
+   .row{
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80vh;
+   }
+   .header-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 350px;
+   }
+   #services container{
+    display: inline-block;
+   }
+   .about{
+    height: 160vh;
+   }
+   .about-col-2 .sub-title{
+    margin: 20px;
+   }
+   .copyright{
+    margin-top: 400px;
+   }
+   .header-text p{
+    margin: 30px;
+   }
+    
+
 }
