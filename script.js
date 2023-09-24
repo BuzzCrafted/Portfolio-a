@@ -12,6 +12,7 @@
       }
 
 // form submission
+
   const scriptURL = 'https://script.google.com/macros/s/AKfycbx39RcoNZcpKHY1npVi-oUuKkqdvTgAKQAGsS77BgOpsf4rtPtw-mH96miWcGXKws7o/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
@@ -24,12 +25,10 @@
         msg.innerHTML = "Message Sent Successfully !"
         setTimeout(function(){
           msg.innerHTML = ""
-        }, 5000)
+        }, 15000)
         form.reset()
       })
 
       .catch(error => console.error('Error!', error.message))
   })
-
-
 
